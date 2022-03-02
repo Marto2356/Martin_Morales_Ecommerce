@@ -1,7 +1,7 @@
 import NavBar from './NavBar'
 
 function Header () {
-    return  <header>
+    return  <header id="main-header">
                 <h1>CoderShop</h1>
                 <NavBar/>
             </header>
