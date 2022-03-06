@@ -25,6 +25,17 @@ html, body, #root{
 
 }
 
+.botonera{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    width: 4rem;
+    height:2rem;
+    font-size:100%;
+    background-color:$colorSecundario;
+    color:$colorPrimario;
+}
+
 nav a{
     margin-left: 1rem;
     color:$colorSecundario;
