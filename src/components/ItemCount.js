@@ -17,7 +17,7 @@ const ItemCount = (props) => {
     }
     
     return (
-        <div class="botonera">
+        <div className="botonera">
             <button onClick={agregar}>+</button>
             <h3>{contador}</h3>
             <button onClick={quitar}>-</button>

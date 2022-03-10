@@ -2,7 +2,7 @@ import NavBar from './NavBar'
 
 function Header () {
     return  <header id="main-header">
-                <h1>CoderShop</h1>
+                <h1>BiblioCoder</h1>
                 <NavBar/>
             </header>
 }
