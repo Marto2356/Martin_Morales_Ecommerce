@@ -1,11 +1,7 @@
 import React from 'react'
 
 const ItemDetail = (props) => {
-    const nombre = props.producto.nombre;
-    const generos = props.producto.generos;
-    const autor = props.producto.autor;
-    const fecha = props.producto.fecha;
-    const precio = props.producto.precio;
+    const { nombre, generos, autor, fecha, precio } = props.producto;
 
     return (
         <div>

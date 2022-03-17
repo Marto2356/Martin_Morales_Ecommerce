@@ -3,14 +3,20 @@ import Main from './Main'
 import Footer from './Footer'
 import ItemListContainer from './ItemListContainer'
 import ItemDetailContainer from './ItemDetailContainer'
+import {ToastContainer} from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
+import { BrowserRouter } from 'react-router-dom'
 
 function App () {
-    return  <>
-                <Header/>
-                <ItemListContainer saludo="Hola mi nombre es Martin Morales y este es mi proyecto."/>
-                <Main/>
-                <ItemDetailContainer/>
-                <Footer/>
-            </>
+    return  (
+        <BrowserRouter>
+            <Header/>
+            <ItemListContainer/>
+            <Main/>
+            <ItemDetailContainer/>
+            <Footer/>
+            <ToastContainer/>
+        </BrowserRouter>
+    )
 }
 export default App
