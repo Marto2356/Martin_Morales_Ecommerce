@@ -1,18 +1,21 @@
 import React, {useState, useEffect} from "react";
 import ItemDetail from "./ItemDetail"
 import productosBack from '../assets/productos'
+import ItemCount from "./ItemCount"
+import {useParams} from 'react-router-dom'
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = (props) => {
     const [producto, setProducto] = useState({})
 
-    const id = 1//ACA DEBO USAR USEPARAMS
+    const {id} = useParams();
 
     useEffect(() => {
         const promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            const productoBack = productosBack.find(producto => producto.id===id)
-            resolve(productoBack);
-        }, 2000);
+            setTimeout(() => {
+                resolve(productosBack.find((item)=>{
+                    return item.id.toString() === id;
+                }));
+            }, 2000);
         }).then((data) => {
         setProducto(data);
         });
@@ -20,6 +23,8 @@ const ItemDetailContainer = () => {
 
     return  <div>
                 <ItemDetail producto={producto}/>
+
+                <ItemCount className="botonera" inicial={1} stock={10}/>
             </div>;
 };
 
